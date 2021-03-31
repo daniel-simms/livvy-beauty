@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
       <section className={styles.heading}>
 
         <h1>
-          Beauty Theariapist
+          Beauty Therapist
           <small>North London</small>
         </h1>
         <ul>
