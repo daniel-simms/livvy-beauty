@@ -2,8 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 import styles from "./layout.module.css";
 import Link from "next/link";
-import NavLink from "@components/NavLink";
-import Header from "@components/Header";
+import NavLink from "../../NavLink";
+import Header from "../../Header";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import { Home, Spa, Star, Photo, ContactSupport } from "@material-ui/icons/";
 import styled from "styled-components";
@@ -54,6 +54,7 @@ const Nav = styled.div`
   display: flex;
   color: white;
   padding: 8px 0 5px 0;
+  border-top: 1px solid black;
 
   &&& {
     justify-content: space-evenly;

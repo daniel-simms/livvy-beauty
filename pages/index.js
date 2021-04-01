@@ -1,10 +1,14 @@
 import Head from "next/head";
 
-import Layout, { siteTitle } from "@components/Layout";
-import BackgroundVideo from "@components/BackgroundVideo";
-import { getSortedPostsData } from "@utils/posts";
+import { LocationOn } from "@material-ui/icons";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
 
-import styles from "@styles/index.module.css";
+import Layout, { siteTitle } from "../components/Layout";
+import BackgroundVideo from "../components/BackgroundVideo";
+import { getSortedPostsData } from "../utils/posts";
+import styles from "../styles/index.module.css";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -26,8 +30,10 @@ export default function Home({ allPostsData }) {
 
       <section className={styles.heading}>
         <h1>
-          Beauty Therapist
-          <small>North London</small>
+          Beautician
+          <small>
+            <Icon fontSize="large" /> North London
+          </small>
         </h1>
         <ul>
           <li>Eyebrow Tinting</li>
@@ -36,7 +42,25 @@ export default function Home({ allPostsData }) {
           <li>Facials</li>
           <li>Top Tier Company</li>
         </ul>
+        <Link href="/treatments">
+          <CTA variant="outlined">Get Pampered 💅🏻</CTA>
+        </Link>
       </section>
     </Layout>
   );
 }
+
+const CTA = styled(Button)`
+  &&& {
+    text-transform: capitalize;
+    margin-top: 2rem;
+    color: #c83aa8;
+    border: 1px solid #c83aa8;
+  }
+`;
+
+const Icon = styled(LocationOn)`
+  position: relative;
+  top: 4px;
+  left: 2px;
+`;

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./header.module.css";
 import styled from "styled-components";
 
 export default function Header() {
@@ -27,6 +26,7 @@ const Background = styled.div`
   height: 120px;
   display: grid;
   place-items: center;
+  border-bottom: 1px solid black;
 `;
 
 const Container = styled.div`

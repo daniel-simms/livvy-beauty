@@ -1,12 +1,12 @@
 .heading {
   color: white;
+  font-style: italic;
   text-align: center;
-  font-weight: 200;
 }
 
 .heading > h1 {
   color: #c83aa8;
-  font-weight: 100;
+  font-weight: 400;
   font-size: calc(4rem + 1vmin);
   display: inline-block;
   margin-top: 10rem;
@@ -27,7 +27,6 @@
   display: flex;
   gap: 30px;
   justify-content: center;
-  font-style: italic;
 }
 .heading > ul > li::before {
   content: "-";
