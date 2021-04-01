@@ -35,7 +35,7 @@ export default function Layout({ children, home }) {
         <NavLink href="/" label="Home" icon={Home} />
         <NavLink href="/treatments" label="Treatments" icon={Spa} />
         <NavLink href="/reviews" label="Reviews" icon={Star} />
-        <NavLink href="/gallery" label="Gallery" icon={Photo} />
+        {/* <NavLink href="/gallery" label="Gallery" icon={Photo} /> */}
         <NavLink href="/contact" label="Contact" icon={ContactSupport} />
       </Nav>
     </div>
