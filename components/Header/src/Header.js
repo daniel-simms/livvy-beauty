@@ -22,14 +22,16 @@ export default function Header() {
 }
 
 const Background = styled.div`
-  background-color: black;
+  background-color: #080708;
   width: 100vw;
   height: 120px;
+  display: grid;
+  place-items: center;
 `;
 
 const Container = styled.div`
   position: relative;
-  width: 200px;
-  height: calc(200px / 1.795);
-  margin: 0 auto 20px auto;
+  width: 150px;
+  height: calc(150px / 1.795);
+  margin: 0 auto;
 `;
