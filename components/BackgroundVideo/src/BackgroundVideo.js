@@ -9,6 +9,7 @@ export default function BackgroundVideo({ src }) {
         loop
         autoPlay
         muted
+        playsinline
         className={styles.video}
       >
         <source src={src} />
@@ -16,4 +17,4 @@ export default function BackgroundVideo({ src }) {
     </div>
   );
 }
-// Video by Artem Podrez from Pexels
+// TODO: Credit Pexels video + Sort something out with the video on smaller/ unsupported devices

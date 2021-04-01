@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #f3eef2;
+}
+
 * {
   box-sizing: border-box;
 }

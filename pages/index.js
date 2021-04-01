@@ -39,7 +39,6 @@ export default function Home({ allPostsData }) {
           <li>Eyebrow Tinting</li>
           <li>Gel Nails</li>
           <li>Waxing</li>
-          <li>Facials</li>
           <li>Top Tier Company</li>
         </ul>
         <Link href="/treatments">
