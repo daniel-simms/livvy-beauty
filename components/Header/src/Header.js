@@ -1,14 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./header.module.css";
+import styled from "styled-components";
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <div
-        className={styles.logo}
-      >
-        <Image
+    <Background>
+      <Container>
+      <Image
           priority
           src="/images/livvy-logo.png"
           layout="fill"
@@ -17,16 +16,20 @@ export default function Header() {
             margin: "auto",
           }}
         />
-      </div>
-      <div className={styles.nav}>
-        <ul>
-          <li>Treatments</li>
-          <li>Gallery</li>
-          <li>Testimonials</li>
-          <li>FAQ</li>
-          <li>Conact</li>
-        </ul>
-      </div>
-    </div>
+      </Container>
+    </Background>
   );
 }
+
+const Background = styled.div`
+  background-color: black;
+  width: 100vw;
+  height: 120px;
+`;
+
+const Container = styled.div`
+  position: relative;
+  width: 200px;
+  height: calc(200px / 1.795);
+  margin: 0 auto 20px auto;
+`;

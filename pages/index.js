@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import Layout, { siteTitle } from "@components/Layout";
+import BackgroundVideo from "@components/BackgroundVideo";
 import { getSortedPostsData } from "@utils/posts";
 
 import styles from "@styles/index.module.css";
@@ -21,8 +22,10 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={styles.heading}>
 
+      <BackgroundVideo src="/videos/nails-2.mp4" />
+
+      <section className={styles.heading}>
         <h1>
           Beauty Therapist
           <small>North London</small>

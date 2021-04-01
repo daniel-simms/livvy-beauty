@@ -26,7 +26,6 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <BackgroundVideo src="/videos/nails-2.mp4" />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
