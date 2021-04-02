@@ -9,7 +9,7 @@ export default function BackgroundVideo({ src }) {
         loop
         autoPlay
         muted
-        playsinline
+        playsInline
         className={styles.video}
       >
         <source src={src} />

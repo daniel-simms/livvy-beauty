@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import { LocationOn } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
@@ -6,48 +7,37 @@ import styled from "styled-components";
 
 import Layout, { siteTitle } from "../components/Layout";
 import BackgroundVideo from "../components/BackgroundVideo";
-import { getSortedPostsData } from "../utils/posts";
-import styles from "../styles/index.module.css";
-import Link from "next/link";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
-      video: "/videos/nails-2.mp4"
+      video: "/videos/nails.mp4",
     },
   };
 }
 
-export default function Home({ allPostsData, video }) {
+export default function Home({ video }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
-      <BackgroundVideo src={video} />
-
-      <section className={styles.heading}>
+      <section>
         <div>
-        <h1>
-          Beautician
-          <small>
-            <Icon fontSize="large" /> North London
-          </small>
-        </h1>
-        {/* <ul>
-          <li>Eyebrow Tinting</li>
-          <li>Gel Nails</li>
-          <li>Waxing</li>
-          <li>Top Tier Company</li>
-        </ul> */}
-        <Link href="/treatments">
-          <CTA variant="outlined">Get Pampered 💅🏻</CTA>
-        </Link>
+          <h1>
+            Beautician
+            <small>
+              <Icon fontSize="large" /> North London
+            </small>
+          </h1>
+          <Link href="/treatments">
+            <CTA variant="outlined">Get Pampered 💅🏻</CTA>
+          </Link>
         </div>
       </section>
+
+      <BackgroundVideo src={video} />
     </Layout>
   );
 }
