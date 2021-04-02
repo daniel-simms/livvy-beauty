@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../components/Layout";
 import {
   Grid,
@@ -16,14 +17,23 @@ import data from "../data/reviews";
 export async function getStaticProps() {
   return {
     props: {
-      reviews: data
+      reviews: data,
     },
   };
 }
 
-export default function Reviews({reviews}) {
+export default function Reviews({ reviews }) {
   return (
     <Layout>
+      <Head>
+        <title>Reviews | Livvy Beauty</title>
+        <meta
+          name="description"
+          content="Reviews from the customers of Livvy Beauty."
+          key="description"
+        />
+        <meta name="og:title" content="Reviews | Livvy Beauty" key="title" />
+      </Head>
       <h1 style={{ margin: 0 }}>Reviews</h1>
 
       <ReviewList container spacing={3}>
@@ -66,7 +76,7 @@ const Review = styled.p`
 `;
 
 const ReviewerAvatar = styled(Avatar)`
-  &&&{
+  &&& {
     background-color: #c83aa8;
   }
 `;

@@ -4,8 +4,7 @@ import Header from "../../Header";
 import { Home, Spa, Star, ContactSupport } from "@material-ui/icons/";
 import styled from "styled-components";
 
-const name = "Olivia Callaghan";
-export const siteTitle = "Livvy.beauty";
+export const siteTitle = "Livvy Beauty";
 
 export default function Layout({ children }) {
   return (
@@ -15,10 +14,14 @@ export default function Layout({ children }) {
         <meta
           name="description"
           content="Olivia Callaghan - North London based beautician."
+          key="description"
         />
-        <meta property="og:image" content="/images/livvy-logo-icon.png" />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="og:image"
+          content="/images/livvy-logo-icon.png"
+          key="image"
+        />
+        <meta name="og:title" content={siteTitle} key="title" />
       </Head>
       <Header />
       <Content>{children}</Content>

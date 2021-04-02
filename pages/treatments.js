@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core/";
 
 import data from "../data/treatments";
+import Head from "next/head";
 
 export async function getStaticProps() {
   return {
@@ -21,6 +22,15 @@ export async function getStaticProps() {
 export default function Treatments({ treatments }) {
   return (
     <Layout>
+      <Head>
+        <title>Treatments | Livvy Beauty</title>
+        <meta
+          name="description"
+          content="Treatments provided by Livvy Beauty."
+          key="description"
+        />
+        <meta name="og:title" content='Treatments | Livvy Beauty' key="title" />
+      </Head>
       <h1 style={{ margin: 0 }}>Treatments</h1>
 
       <TreatmentList container spacing={3}>
