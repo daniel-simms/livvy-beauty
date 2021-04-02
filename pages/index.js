@@ -5,7 +5,7 @@ import { LocationOn } from "@material-ui/icons";
 import { Button, Typography } from "@material-ui/core";
 import styled from "styled-components";
 
-import Layout, { siteTitle } from "../components/Layout";
+import Layout from "../components/Layout";
 import BackgroundVideo from "../components/BackgroundVideo";
 
 export async function getStaticProps() {
@@ -20,7 +20,7 @@ export default function Home({ video }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Livvy Beauty</title>
       </Head>
       <BackgroundVideo src={video} />
 
