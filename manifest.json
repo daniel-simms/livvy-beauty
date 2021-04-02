@@ -3,7 +3,7 @@
   "short_name": "Livvy Beauty",
   "theme_color": "#c83aa8",
   "background_color": "#f3eef2",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
