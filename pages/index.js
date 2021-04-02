@@ -29,21 +29,23 @@ export default function Home({ allPostsData }) {
       <BackgroundVideo src="/videos/nails-2.mp4" />
 
       <section className={styles.heading}>
+        <div>
         <h1>
           Beautician
           <small>
             <Icon fontSize="large" /> North London
           </small>
         </h1>
-        <ul>
+        {/* <ul>
           <li>Eyebrow Tinting</li>
           <li>Gel Nails</li>
           <li>Waxing</li>
           <li>Top Tier Company</li>
-        </ul>
+        </ul> */}
         <Link href="/treatments">
           <CTA variant="outlined">Get Pampered 💅🏻</CTA>
         </Link>
+        </div>
       </section>
     </Layout>
   );
@@ -52,7 +54,6 @@ export default function Home({ allPostsData }) {
 const CTA = styled(Button)`
   &&& {
     text-transform: capitalize;
-    margin-top: 2rem;
     color: #c83aa8;
     border: 1px solid #c83aa8;
   }
