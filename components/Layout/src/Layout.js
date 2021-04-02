@@ -1,19 +1,13 @@
-import { useState } from "react";
 import Head from "next/head";
-import styles from "./layout.module.css";
-import Link from "next/link";
 import NavLink from "../../NavLink";
 import Header from "../../Header";
-import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import { Home, Spa, Star, Photo, ContactSupport } from "@material-ui/icons/";
+import { Home, Spa, Star, ContactSupport } from "@material-ui/icons/";
 import styled from "styled-components";
 
 const name = "Olivia Callaghan";
 export const siteTitle = "Livvy.beauty";
 
-export default function Layout({ children, home }) {
-  const [value, setValue] = useState(0);
-
+export default function Layout({ children }) {
   return (
     <div>
       <Head>
@@ -22,10 +16,7 @@ export default function Layout({ children, home }) {
           name="description"
           content="Olivia Callaghan - North London based beautician."
         />
-        <meta
-          property="og:image"
-          content='/images/livvy-logo-icon.png'
-        />
+        <meta property="og:image" content="/images/livvy-logo-icon.png" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -44,7 +35,7 @@ export default function Layout({ children, home }) {
 
 const Content = styled.main`
   padding: 1rem;
-`
+`;
 const Nav = styled.div`
   position: fixed;
   bottom: 0;

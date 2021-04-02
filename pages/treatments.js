@@ -4,24 +4,21 @@ import {
   Grid,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
-  IconButton,
 } from "@material-ui/core/";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import data from "../data/treatments";
 
 export async function getStaticProps() {
   return {
     props: {
-      treatments: data
+      treatments: data,
     },
   };
 }
 
-export default function Treatments({treatments}) {
+export default function Treatments({ treatments }) {
   return (
     <Layout>
       <h1 style={{ margin: 0 }}>Treatments</h1>
