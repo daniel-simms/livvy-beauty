@@ -11,16 +11,24 @@ import {
 } from "@material-ui/core/";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
-import treatments from "../data/treatments";
+import data from "../data/treatments";
 
-export default function Treatments() {
+export async function getStaticProps() {
+  return {
+    props: {
+      treatments: data
+    },
+  };
+}
+
+export default function Treatments({treatments}) {
   return (
     <Layout>
       <h1 style={{ margin: 0 }}>Treatments</h1>
 
       <TreatmentList container spacing={3}>
         {treatments.map((treatment) => (
-          <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={treatment.id}>
             <Card>
               <CardActionArea>
                 <CardMedia

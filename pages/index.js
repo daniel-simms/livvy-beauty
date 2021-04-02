@@ -15,18 +15,19 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData,
+      video: "/videos/nails-2.mp4"
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, video }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
-      <BackgroundVideo src="/videos/nails-2.mp4" />
+      <BackgroundVideo src={video} />
 
       <section className={styles.heading}>
         <div>

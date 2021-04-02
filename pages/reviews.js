@@ -10,16 +10,25 @@ import {
 } from "@material-ui/core/";
 import { Rating } from "@material-ui/lab/";
 import styled from "styled-components";
-import reviews from "../data/reviews";
 
-export default function Reviews() {
+import data from "../data/reviews";
+
+export async function getStaticProps() {
+  return {
+    props: {
+      reviews: data
+    },
+  };
+}
+
+export default function Reviews({reviews}) {
   return (
     <Layout>
       <h1 style={{ margin: 0 }}>Reviews</h1>
 
       <ReviewList container spacing={3}>
         {reviews.map((review) => (
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4} key={review.id}>
             <Card>
               <Reviewer
                 title={review.name}
