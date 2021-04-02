@@ -25,7 +25,6 @@ export default function Layout({ children }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
-
         <meta name="application-name" content="Livvy Beauty" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -57,7 +56,7 @@ export default function Layout({ children }) {
           sizes="16x16"
           href="icons/icon-72x72.png"
         />
-        <link rel="manifest" href="/static/manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="icons/icon-72x72.png" color="#5bbad5" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -70,7 +69,7 @@ export default function Layout({ children }) {
         />
         <meta
           name="twitter:image"
-          content="https://livvy.beautyicons/android-chrome-192x192.png"
+          content="icons/icon-192x192.png"
         />
         <meta name="twitter:creator" content="@DanielMarcSimms" />
         <meta property="og:type" content="website" />
