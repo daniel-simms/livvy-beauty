@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon-32x32.png" />
+        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Olivia Callaghan - North London based beautician."
