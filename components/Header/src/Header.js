@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,19 +7,29 @@ export default function Header() {
   return (
     <Background>
       <Container>
-      <Image
-          priority
-          src="/images/livvy-logo.png"
-          layout="fill"
-          alt="Logo for Livvy Beauty"
-          style={{
-            margin: "auto",
-          }}
-        />
+        <Link href="/">
+          <Logo
+            priority
+            src="/images/livvy-logo.png"
+            layout="fill"
+            alt="Logo for Livvy Beauty"
+            style={{
+              margin: "auto",
+            }}
+          />
+        </Link>
       </Container>
     </Background>
   );
 }
+
+const Logo = styled(Image)`
+  &&& {
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+`
 
 const Background = styled.div`
   background-color: #080708;
