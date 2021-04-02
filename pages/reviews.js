@@ -24,7 +24,7 @@ export async function getStaticProps() {
 
 export default function Reviews({ reviews }) {
   return (
-    <Layout>
+    <Layout warning='Reviews'>
       <Head>
         <title>Reviews | Livvy Beauty</title>
         <meta

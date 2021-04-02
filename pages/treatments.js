@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 export default function Treatments({ treatments }) {
   return (
-    <Layout>
+    <Layout warning='Treatments'>
       <Head>
         <title>Treatments | Livvy Beauty</title>
         <meta

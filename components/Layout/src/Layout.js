@@ -1,16 +1,18 @@
-import Head from "next/head";
 import NavLink from "../../NavLink";
 import Header from "../../Header";
 import { Home, Spa, Star, ContactSupport } from "@material-ui/icons/";
+import { Alert } from "@material-ui/lab/";
 import styled from "styled-components";
 
-export default function Layout({ children }) {
+export default function Layout({ children, warning }) {
   return (
     <div>
-      <Head>
-
-      </Head>
       <Header />
+      {warning && (
+        <UnderConstruction severity="warning" boxShadow={1}>
+          Site in Development! {warning} are currently placeholders only.
+        </UnderConstruction>
+      )}
       <Content>{children}</Content>
       <Nav>
         <NavLink href="/" label="Home" icon={Home} />
@@ -22,6 +24,16 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
+const UnderConstruction = styled(Alert)`
+  justify-content: center;
+  &&& {
+    box-shadow: 0px .5px 2px .5px rgba(0, 0, 0, .3);
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
+  }
+`;
 
 const Content = styled.main`
   padding: 1rem;
