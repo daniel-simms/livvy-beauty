@@ -8,21 +8,13 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import BackgroundVideo from "../components/BackgroundVideo";
 
-export async function getStaticProps() {
-  return {
-    props: {
-      video: "/videos/nails.mp4",
-    },
-  };
-}
-
-export default function Home({ video }) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
         <title>Livvy Beauty</title>
       </Head>
-      <BackgroundVideo src={video} />
+      <BackgroundVideo src='/videos/nails.mp4' />
 
       <VirticalCenter>
         <Container>
