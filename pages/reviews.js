@@ -32,7 +32,6 @@ export default function Reviews({ reviews }) {
         />
         <meta name="og:title" content="Reviews | Livvy Beauty" key="title" />
       </Head>
-      <h1 style={{ margin: 0 }}>Reviews</h1>
 
       <ReviewList container spacing={3}>
         {reviews.map((review) => (

@@ -31,7 +31,6 @@ export default function Treatments({ treatments }) {
         />
         <meta name="og:title" content='Treatments | Livvy Beauty' key="title" />
       </Head>
-      <h1 style={{ margin: 0 }}>Treatments</h1>
 
       <TreatmentList container spacing={3}>
         {treatments.map((treatment) => (
