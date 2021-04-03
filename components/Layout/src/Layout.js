@@ -9,7 +9,7 @@ export default function Layout({ children, warning }) {
     <div>
       <Header />
       {warning && (
-        <UnderConstruction severity="warning" boxShadow={1}>
+        <UnderConstruction severity="warning">
           Site in Development! {warning} are currently placeholders only.
         </UnderConstruction>
       )}
