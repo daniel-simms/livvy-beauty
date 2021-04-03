@@ -82,7 +82,7 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="icons/icon-72x72.png"
           />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="static/manifest.json" />
           <link rel="mask-icon" href="icons/icon-72x72.png" color="#080708" />
           <link rel="shortcut icon" href="/favicon.ico" />
 
