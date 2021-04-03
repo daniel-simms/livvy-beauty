@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  static render() {
+  render() {
     return (
       <Html lang='en'>
         <Head>
@@ -111,4 +111,5 @@ export default class MyDocument extends Document {
       </Html>
     );
   }
+
 }
