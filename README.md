@@ -10,7 +10,6 @@ Portfolio page for **Olivia Callaghan**, my one and only <3
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "next": "^10.0.0",
-    "next-pwa": "^5.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "^5.2.3"
